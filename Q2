@@ -1,4 +1,4 @@
-class converter:
+class Converter:
 
     def __init__(self, volt, maxVolt):
         self.volt = volt
