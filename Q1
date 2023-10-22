@@ -1,5 +1,5 @@
 class Converter:
-    def init(self,volt):
+    def __init__(self,volt):
         self.volt=volt
     def ToDigital(self):
         int=int(0*204.6)
