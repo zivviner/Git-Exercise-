@@ -1,10 +1,18 @@
-class Converter:
-    def init(self,volt):
-        self.volt=volt
+class converter:
+
+    def __init__(self, volt, maxVolt):
+        self.volt = volt
+        self.maxVolt = maxVolt
+
     def ToDigital(self):
-        int=int(0*204.6)
-        binary= format(int,'b')
-        return binary
+        if self.volt > self.maxVolt:
+            return "not in the range (0-5)"
+        else:
+            num = int((self.volt)*204.6)
+            binary = format(num,'b')
+            self.bits = len(binary)
+            return binary
+
     def SetDigitalValue(self):
         digValue = self.ToDigital(self)
         self.digValue = digValue
